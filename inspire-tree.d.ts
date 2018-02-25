@@ -143,7 +143,7 @@ export class InspireTree extends EventEmitter2 {
     editing(full?: boolean): TreeNodes;
     enableDeselection(): InspireTree;
     expand(): TreeNodes;
-    expandDeep(): TreeNodes;
+    expandDeep(): Promise<TreeNodes>;
     expanded(full?: boolean): TreeNodes;
     expandParents(): TreeNodes;
     extract(predicate: string|NodeIteratee): TreeNodes;
@@ -221,7 +221,7 @@ export class TreeNodes extends Array<TreeNode> {
     editable(full?: boolean): TreeNodes;
     editing(full?: boolean): TreeNodes;
     expand(): TreeNodes;
-    expandDeep(): TreeNodes;
+    expandDeep(): Promise<TreeNodes>;
     expanded(full?: boolean): TreeNodes;
     expandParents(): TreeNodes;
     extract(predicate: string|NodeIteratee): TreeNodes;
